@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Checked | Radio</title>
+  <style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  body{
+    background:#f0ffff;
+    border:3px solid black;
+    margin:10px;
+    border-radius: 5px;
+  }
+  h1{
+    text-align:center;
+    margin:10px;
+    padding:10px;
+    border:2px solid black;
+    transition-duration:1s;
+  }
+  h1:hover{
+    background:black;
+    color:white;
+    box-shadow:0 10px 20px 0 rgba(0,0,0,0.5);
+    }
+  h2{
+    text-align:center;
+    font-weight:900;
+  }
+  .box-1,.box-2{
+    background:#87ceeb40;
+    margin:10px;
+    padding:5px;
+    border-radius:4px;
+  }
+ input[type="checkbox"], input[type="radio"] {
+         display: none;
+ }
+ label{
+   display: block;
+   background:white;
+   width:auto;
+   height:4em;
+   margin:10px 12px;
+   border:4px solid #00fa9a;
+   border-radius:10px;
+   box-shadow:0 5px 10px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.20);
+   color:black;
+   padding:20px;
+   font-size:20px;
+   font-weight:bold;
+ }
+ label > span{
+   display:inline-block;
+   width:15px;
+   height:15px;
+   border:3px solid #00800090;
+   border-radius:50%;
+   margin-right:10px;
+ }
+ input[type="checkbox"]:checked + label, input[type="radio"]:checked + label {
+         background: #173459;
+         color: white;
+      }
+       input[type="checkbox"]:checked + label > span, input[type="radio"]:checked + label > span {
+         background: #00800090;
+      }
+      .submit{
+        font-size:20px;
+        text-align:center;
+        height:2em;
+        width:80%;
+        margin:10px 10px 10px 40px;
+        padding-top:10px;
+        padding-bottom:40px;
+        border:3px solid  #00fa9a;
+        background: white;
+        color:black;
+        font-weight:1000;
+        border-radius:10px;
+      }
+  </style>
+</head>
+<body>
+  <h1>What You Deserve!</h1>
+      <form action="check.php" method="post">
+  <div class="box-1">
+      <h2>How Many Of Them You Like.</h2>
+      <!--For Oreo-->
+      <input type="checkbox" name="biscuit" value="oreo" id="oreo" />
+      <label for="oreo"><span></span>Oreo</label>
+      <!--For Butter-->
+      <input type="checkbox" name="biscuit" value="butter" id="butter" />
+      <label for="butter"><span></span>Butter</label>
+      <!--For Parleji-->
+      <input type="checkbox" name="biscuit" value="parleji" id="parleji" />
+      <label for="parleji"><span></span>Parleji</label>
+      <!--For cream-->
+      <input type="checkbox" name="biscuit" value="cream" id="cream" />
+      <label for="cream"><span></span>Cream</label>
+    </div>
+    <!-- For Radio-->
+    <div class="box-2">
+        <h2>Which Country You Like Most?</h2>
+       <!--For cream-->
+      <input type="radio" name="country" value="nepal" id="nepal" />
+      <label for="nepal" ><span></span>Nepal</label>
+       <!--For cream-->
+      <input type="radio" name="country" value="india" id="india" />
+      <label for="india"><span></span>India</label>
+       <!--For cream-->
+      <input type="radio" name="country" value="london" id="london" />
+      <label for="london"><span></span>London</label>
+       <!--For cream-->
+      <input type="radio" name="country" value="USA" id="USA" />
+      <label for="USA"><span></span>USA</label>
+    </div>
+    <input type="submit" class="submit" />
+    <input type="reset" class="submit" />
+     </form>
+</body>
+</html>
